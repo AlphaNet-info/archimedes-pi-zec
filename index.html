@@ -235,6 +235,53 @@
     .col-right { display:flex; flex-direction:column; gap:clamp(7px,1.5vh,28px); min-height:0; grid-column:2; grid-row:1; }
     .details { grid-column:1 / -1; grid-row:2; }
   }
+
+  /* phones: natural scrolling page */
+  @media (max-width: 700px) {
+    html, body { overflow:auto; overflow-x:hidden; }
+    .page { height:auto; min-height:100dvh; gap:14px; padding:20px 16px 28px; }
+    .brand-tag { display:none; }
+    .brand img { height:20px; }
+    .tier-name { font-size:21px; }
+    .badge { font-size:8.5px; margin-top:.5em; }
+    .eyebrow { font-size:10px; }
+    h1 { font-size:clamp(30px,9.5vw,44px); margin-top:.35em; }
+    .tagline { font-size:13px; line-height:1.55; }
+    .stats { grid-template-columns:repeat(2, 1fr); gap:8px; }
+    .stat { padding:12px 14px 10px; }
+    .stat .v { font-size:23px; }
+    .stat .k { font-size:8px; letter-spacing:.1em; }
+    .card-title { white-space:normal; font-size:15px; }
+    .card-note { font-size:8px; }
+    .chart-card { flex:0 0 auto; }
+    .chart-wrap { flex:0 0 auto; }
+    .chart-wrap img.img-tall { display:none; }
+    .chart-wrap img.img-flat { display:block; width:100%; max-height:none; }
+    .heat-grid { gap:2px; }
+    .heat-grid .hc { font-size:6.5px; padding:.28em 0; }
+    .heat-grid .hlab { font-size:6px; }
+    .heat-grid .hy { font-size:8px; padding-right:.4em; }
+    .heat-foot { flex-wrap:wrap; gap:6px 14px; font-size:8px; }
+    .engine h2 { font-size:20px; }
+    .engine-grid { grid-template-columns:1fr; }
+    .feat { padding-top:10px; margin-top:10px; }
+    .feat .num { font-size:11px; }
+    .feat .ft { font-size:15px; }
+    .feat .fd { font-size:12px; line-height:1.5; }
+    .details { flex-wrap:wrap; gap:14px 0; padding:14px 0; }
+    .details .item { flex:0 0 50%; }
+    .details .item:nth-child(3) { border-left:none; padding-left:2px; }
+    .details .dk { font-size:8px; }
+    .details .dv { font-size:15px; }
+    .access { font-size:9px; }
+    .foot-row { flex-direction:column; align-items:flex-start; gap:10px; }
+
+    .card-head { flex-direction:column; align-items:flex-start; gap:4px; }
+    .card-note { white-space:normal; text-align:left; }
+    .access { display:block; white-space:normal; line-height:1.6; }
+    .heat-grid .hc { font-size:6px; }
+    .foot-row .disc { text-align:left; font-size:9px; max-width:none; }
+  }
 </style>
 </head>
 <body>
